@@ -2,5 +2,9 @@
   {
     bool filter = true
 //trigger configurations: A==1, B==2, C==3
-    int32 trig_conf = 3
-  }
+  int32 trig_conf = 3
+  vdouble PosScint1 = {150.,1600.,900.}
+  vdouble PosScint2 = {50.,1600.,2450.}
+  vdouble PosScint3 = {400.,-1600.,100.}
+  vdouble PosScint4 = {-250.,-1600.,-2050.}
+}
