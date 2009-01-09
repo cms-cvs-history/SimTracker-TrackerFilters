@@ -3,12 +3,12 @@
 #define COSMICTIFTRIGFILTER_H
 
 
-#include "SimDataFormats/HepMCProduct/interface/HepMCProduct.h"
+#include "SimDataFormats/GeneratorProducts/interface/HepMCProduct.h"
 #include "FWCore/Framework/interface/EDFilter.h"
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 #include "FWCore/Framework/interface/Event.h"
 #include "FWCore/Framework/interface/EventSetup.h"
-#include "CLHEP/Vector/ThreeVector.h"
+//#include "CLHEP/Vector/ThreeVector.h"
 
 namespace cms{
 
@@ -17,7 +17,8 @@ class CosmicTIFTrigFilter : public edm::EDFilter {
   CosmicTIFTrigFilter(const edm::ParameterSet& conf);
   virtual ~CosmicTIFTrigFilter() {}
   bool filter(edm::Event & iEvent, edm::EventSetup const& c);
-  bool Sci_trig(CLHEP::Hep3Vector,  CLHEP::Hep3Vector, CLHEP::Hep3Vector);
+  bool Sci_trig(HepMC::FourVector,  HepMC::FourVector, HepMC::FourVector);
+  //  bool Sci_trig(CLHEP::Hep3Vector,  CLHEP::Hep3Vector, CLHEP::Hep3Vector);
 
  private:
   edm::ParameterSet conf_;
