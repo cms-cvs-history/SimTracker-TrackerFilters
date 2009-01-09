@@ -3,7 +3,7 @@
 #define COSMICTIFTRIGFILTER_H
 
 
-#include "SimDataFormats/HepMCProduct/interface/HepMCProduct.h"
+#include "SimDataFormats/GeneratorProducts/interface/HepMCProduct.h"
 #include "FWCore/Framework/interface/EDFilter.h"
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 #include "FWCore/Framework/interface/Event.h"
@@ -22,12 +22,10 @@ class CosmicTIFTrigFilter : public edm::EDFilter {
 
  private:
   edm::ParameterSet conf_;
-
   bool inTK;
   int trigconf;
   int tottrig;
   int trig1, trig2, trig3;
-  std::vector<double> trigS1, trigS2, trigS3, trigS4;
   };
 }
 #endif 
